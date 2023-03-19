@@ -5,9 +5,8 @@ import router from './router'
 import StoryblokVue from 'storyblok-vue'
 import VueAnalytics from 'vue-analytics'
 
-
 Vue.config.productionTip = false
-const isProd = process.env.NODE_ENV === "production"
+const isProd = process.env.NODE_ENV === 'production'
 
 new Vue({
   router,
