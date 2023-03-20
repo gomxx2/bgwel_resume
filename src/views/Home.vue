@@ -22,25 +22,67 @@
         :sliderPositionPercentage="sliderPosition"
       /> -->
       <v-layout>
-        <img :src="imgbg" alt="">
+        <vue-responsive-image
+          :image-url="imgbg"
+          :image-ratio="9/16"
+        ></vue-responsive-image>
+        <!-- <img :src="imgbg" alt=""> -->
         <v-layout column justify-center align-center wrap class="mt-4 pt-2">
-          <vue-typer class="headline" :repeat="0" text=" Ardyan Sabat Welly"></vue-typer>
-          <vue-typer
-            :text="text1"
-            :repeat="Infinity"
-            :shuffle="false"
-            initial-action="erasing"
-            :pre-type-delay="70"
-            :type-delay="70"
-            :pre-erase-delay="1980"
-            :erase-delay="150"
-            erase-style="select-back"
-            :erase-on-complete="false"
-            caret-animation="smooth"
-          ></vue-typer>
+          <div v-responsive.lg.xl ><vue-typer class="headline" :repeat="0" text=" Ardyan Sabat Welly"></vue-typer></div>
+
+          <div v-responsive.md    ><vue-typer class="headline" :repeat="0" text=" Ardyan Sabat Welly"></vue-typer></div>
+
+          <div v-responsive.sm.xs ><vue-typer class="headline" :repeat="0" text="   Welly"></vue-typer></div>
+            
+          <div v-responsive.lg.xl >
+            <vue-typer
+              :text="text1"
+              :repeat="Infinity"
+              :shuffle="false"
+              initial-action="erasing"
+              :pre-type-delay="70"
+              :type-delay="70"
+              :pre-erase-delay="1980"
+              :erase-delay="150"
+              erase-style="select-back"
+              :erase-on-complete="false"
+              caret-animation="smooth"
+            ></vue-typer>
+          </div>
+    
+          <div v-responsive.md    >
+            <vue-typer
+              :text="text1"
+              :repeat="Infinity"
+              :shuffle="false"
+              initial-action="erasing"
+              :pre-type-delay="70"
+              :type-delay="70"
+              :pre-erase-delay="1980"
+              :erase-delay="150"
+              erase-style="select-back"
+              :erase-on-complete="false"
+              caret-animation="smooth"
+            ></vue-typer>
+          </div>
         </v-layout>
       </v-layout>
       <br>
+      <div v-responsive.sm.xs >
+        <vue-typer
+              :text="text1"
+              :repeat="Infinity"
+              :shuffle="false"
+              initial-action="erasing"
+              :pre-type-delay="70"
+              :type-delay="70"
+              :pre-erase-delay="1980"
+              :erase-delay="150"
+              erase-style="select-back"
+              :erase-on-complete="false"
+              caret-animation="smooth"
+            ></vue-typer>  
+      </div>
       <v-flex xs12 sm6 md4 lg4 xl4>
         <v-card flat color="transparent" max-width="700">
           <v-card-title primary-title>
@@ -357,6 +399,7 @@
 <script>
 import { VueTyper } from "vue-typer";
 import VueCompareImage from "vue-compare-image";
+import VueResponsiveImage from 'vue-responsive-image';
 
 export default {
   metaInfo: {
@@ -379,7 +422,8 @@ export default {
   },
   components: {
     "vue-typer": VueTyper,
-    VueCompareImage
+    VueCompareImage,
+    VueResponsiveImage
   },
   data() {
     return {
@@ -517,7 +561,7 @@ Based on the SAS No. 1, section 110; SAS No. 78; SAS No. 82.",
         }
        
       ],
-      text1: [" Atma Jaya Catholic University of Indonesia - Magister Akuansi", " Accounting Supervisor - Piaggio Group"],
+      text1: [" Atma Jaya Catholic University-Magister Akuansi", " Accounting Supervisor - Piaggio Group"],
       leftImage: require("../../public/img/1.png"),
       rightImage:require( "../../public/img/3.png"),
       imgbg:require("../../public/img/bgwelbgcool.png"),
