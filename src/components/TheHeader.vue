@@ -7,11 +7,11 @@
             <v-list-tile-title>HOME</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile active-class="teal--text" to="/resume">
+        <!-- <v-list-tile active-class="teal--text" to="/resume">
           <v-list-tile-content>
             <v-list-tile-title>RESUME</v-list-tile-title>
           </v-list-tile-content>
-        </v-list-tile>
+        </v-list-tile> -->
         <!-- <v-list-tile active-class="teal--text" to="/services">
           <v-list-tile-content>
             <v-list-tile-title>SERVICES</v-list-tile-title>
